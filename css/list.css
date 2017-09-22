@@ -1,0 +1,11 @@
+.listTitle{
+    margin: 10 px auto;
+}
+table{ 
+    width: 400px;
+    height: 500px;
+    /* background: #f40; */
+    border: 1px solid #111;
+    text-align: center;
+    margin: 30px auto;
+}
