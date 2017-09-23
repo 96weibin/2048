@@ -4,6 +4,15 @@ function getPosTop(i, j) {
 function getPosLeft(i, j) {
     return j * 120;
 }
+// window.alert = function() {
+//     var chick = document.createElement('div');
+//     chick.style.width = '500px';
+//     chick.style.height = '300px';
+//     chick.style.background = 'rgba(255, 100, 0)';
+//     chick.style.textAlign = 'center'
+//     chick.style.color = '#ffffff';
+// }
+// alert('fsdasdfghjklxcvbnm');
 function getNumberBackGroundColor(number) {
     switch (number) {
         case 2:
@@ -129,15 +138,13 @@ function noBlockHorizontal(row, col1, col2, board) {
 
 //判断垂直方向是否有障碍物
 function noBlockVertical( col, row1, row2, board) {
-    for(var i = row1 + 1; i < row2; i++) {
+    for(var i = row1 + 1 ; i < row2; i++) {
         if(board[col][i] != 0){
             return false;            
         }
     }
     return true;
 }
-
-
 function nomove(board){
     if(canMoveLeft(board) || canMoveUp(board) || canMoveRight(board) || canMoveDown(board) ) {
         return false;
@@ -147,7 +154,7 @@ function nomove(board){
 
 function showNumberWithAnimation(i, j, randNumber) {
     var numberCell = $('#number-cell-' + i + '-' + j);
-    numberCell.css({'background-color':getNumberBackGroundColor(randNumber),'color':getNumberColor(randNumber)})
+    numberCell.css({'background-color':getNumberBackGroundColor(randNumber),'color':getNumberColor(randNumber),'position':'absolute','top':getPosTop(i, j) + 50  + 'px', 'left' : getPosLeft(i, j) + 50 + 'px'})
     numberCell.text(randNumber);
 
     numberCell.animate({
@@ -155,10 +162,10 @@ function showNumberWithAnimation(i, j, randNumber) {
         height:'100px',
         top:getPosTop(i, j),
         left:getPosLeft(i, j)
-    },300);
+    },400);
 }
 
 function showMoveAnimation (fromX, fromY, toX, toY) {
     var numberCell = $('#number-cell-' + fromX + '-' + fromY);
-    numberCell.animate({'top':getPosTop(toX, toY),'left':getPosLeft(toX, toY)},200);
+    numberCell.animate({'top':getPosTop(toX, toY),'left':getPosLeft(toX, toY)},500);
 }

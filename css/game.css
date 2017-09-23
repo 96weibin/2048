@@ -2,7 +2,7 @@
     font-size: 30px;
     float: right;
     margin-top: 50px;
-    margin-right: 200px;
+    margin-right: 50px;
     color: #ff4400;
 }
 .g2048{
@@ -52,7 +52,7 @@
     line-height: 100px;
     font: Arial, Helvetica, sans-serif;
     /* 这句啥意思？ */
-    font-size: 60px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     position: absolute;
