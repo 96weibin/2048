@@ -1,6 +1,5 @@
 var board = new Array();
 var score = 0;
-
 // function clone (arr) {           //错错错  这个是浅拷贝  这里的数组是二维数组
 //     return arr.slice(0);
 // }
