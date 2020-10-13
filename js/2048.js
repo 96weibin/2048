@@ -1,9 +1,6 @@
 var board = new Array();
 var score = 0;
-// function clone (arr) {           //错错错  这个是浅拷贝  这里的数组是二维数组
-//     return arr.slice(0);
-// }
-// var copyBoard ;
+
 $('.start').click(function(){
     $('.wrapper').fadeOut(400);
     newgame();
@@ -52,7 +49,7 @@ function init() {
     for(var i = 0; i < 4; i++) {
         for(var j = 0; j < 4; j++){
             var gridCell = $('#grid-cell-' + i + '-' + j);
-            gridCell.css('top',getPosTop(i, j));//为啥 要传进来两值 ？ 后面只用了一个
+            gridCell.css('top',getPosTop(i, j));// 后面只用了一个
             gridCell.css('left',getPosLeft(i, j));
             // console.log(getPosTop(i,j)+'_______'+getPosLeft(i,j));
             //给小块定位
@@ -89,7 +86,7 @@ function updateBoardView() {    //  点击完成后  遍历board 生成新的 �
 //二维数组用来存贮 每一个块里面的数值
 
 function generateOneNumber() {  //生成新的块  2,4
-    if (nospace(board)){//没有空格 就return false
+    if (nospace(board)){        //没有空格 就return false
         return false;
     }//随机一个位置
     var randX = parseInt(Math.floor(Math.random()*4));

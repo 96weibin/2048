@@ -1,3 +1,10 @@
 # 原生2048小游戏
 
-[浏览](https://96weibin.github.io/Mid-autumn-Festival/index.html)
+## 项目介绍
+
+- pc端 键盘操作2048
+
+### 技术栈
+
+- 原生html、jsc、ss
+- 二维数组遍历
